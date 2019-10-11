@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div>Jotto Demo</div>
-      <Congrats />
+      <Congrats success={false} />
     </div>
   );
 }
