@@ -7,7 +7,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <div>Jotto Demo</div>
+        <h1>Jotto Demo</h1>
         <Congrats success={true} />
         <GuessedWords guessedWords={[
           { guessedWord: 'booya', letterMatchCount: 3 },
