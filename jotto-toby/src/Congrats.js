@@ -5,7 +5,7 @@ const Congrats = (props) => {
   if (props.success) {
     return (
       <div data-test="component-success">
-        <p data-test="component-message">
+        <p data-test="component-message" className="alert alert-success">
           Congrats!! That' correct
         </p>
       </div>

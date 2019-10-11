@@ -15,15 +15,24 @@ const GuessedWords = (props) => {
           )
           : (
             <div data-test="component-table">
-
-              {
-                props.guessedWords.map(({ guessedWord: word, letterMatchCount: count }) => (
-                  <tr key={word} data-test="component-table--guessedWord">
-                    <td key={word}>{word}</td>
-                    <td key={count}>{count}</td>
+              <table className="table table-sm">
+                <thead className="thead-light">
+                  <tr>
+                    <th>Guess</th>
+                    <th>Matching Letters</th>
                   </tr>
-                ))
-              }
+                </thead>
+                <tbody>
+                  {
+                    props.guessedWords.map(({ guessedWord: word, letterMatchCount: count }) => (
+                      <tr key={word} data-test="component-table--guessedWord">
+                        <td key={word}>{word}</td>
+                        <td key={count}>{count}</td>
+                      </tr>
+                    ))
+                  }
+                </tbody>
+              </table>
             </div>
           )
       }
